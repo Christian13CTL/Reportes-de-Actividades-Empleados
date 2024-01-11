@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="415" pageHeight="270" columnWidth="415" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b0cc5e30-b222-4a45-98b7-89d6d3af76fa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ConexionIDK"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="FEC1" class="java.lang.String"/>
+	<parameter name="FEC2" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Ingeniería en Software (II Semestre)\\IV Semestre\\Metodologías Ágiles\\Proyecto\\IDK_Chancusig_Jaramillo_Zamora\\Desarrollo Escritorio\\ProyectoIDK\\src\\reportesIDK\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT CONCAT(Empleados.NOM_EMP,' ',Empleados.APE_EMP) AS NOMBRE, TiposActividad.NOM_TIP, SUM(RegistroActividades.NUM_HOR_REG) AS TOT_HOR
+FROM RegistroActividades, TiposActividad, Empleados, Actividades
+WHERE RegistroActividades.EMP_INI_REG = Empleados.CED_EMP
+AND RegistroActividades.ACT_REG = Actividades.IDE_ACT
+AND Actividades.TIP_ACT_PER = TiposActividad.IDE_TIP
+AND RegistroActividades.FEC_INI_REG BETWEEN $P{FEC1} AND $P{FEC2}
+GROUP BY CONCAT(Empleados.NOM_EMP,' ',Empleados.APE_EMP), TiposActividad.NOM_TIP]]>
+	</queryString>
+	<field name="NOMBRE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOMBRE"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOMBRE"/>
+	</field>
+	<field name="NOM_TIP" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOM_TIP"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOM_TIP"/>
+	</field>
+	<field name="TOT_HOR" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="TOT_HOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="TOT_HOR"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="415" height="30" uuid="d22e1d8c-570a-4ffa-8904-5a523ab7554b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" size="16"/>
+				</textElement>
+				<text><![CDATA[HORAS POR TIPO DE ACTIVIDAD POR EMPLEADO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="210" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<barChart>
+				<chart>
+					<reportElement x="0" y="0" width="415" height="210" uuid="f6e4f1c6-a5e4-493f-a209-ad98e82cf810">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset resetType="Report"/>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{NOMBRE}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{NOM_TIP}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{TOT_HOR}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0f7e790-37f8-4742-b7ae-bce56cefab97" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Login.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Login.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/PanelPrincipal.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/PanelPrincipal.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/PanelPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/PanelPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Principal.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Principal.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Reportes.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Reportes.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Reportes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/Reportes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesActividad.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesActividad.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesActividad.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesActividad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesEstado.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesEstado.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesEstado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesEstado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesPersonal.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesPersonal.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesPersonal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo Escritorio/ProyectoIDK/src/interfaces/ReportesPersonal.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="24lrfYIiTJU7LpOxbAaPUSUuGTA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/CUENTA" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0f7e790-37f8-4742-b7ae-bce56cefab97" name="Default Changelist" comment="" />
+      <created>1644216118013</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644216118013</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="415" pageHeight="842" columnWidth="415" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="daf470b5-eece-49f4-b355-d1161738fb88">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ConexionIDK"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="FEC1" class="java.lang.String"/>
+	<parameter name="FEC2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT SUM(TIMESTAMPDIFF(MONTH, registro_actividad.FEC_INI_REG, registro_actividad.FEC_FIN_REG))
+FROM registro_actividad
+WHERE registro_actividad.FEC_INI_REG BETWEEN $P{FEC1} AND $P{FEC2};]]>
+	</queryString>
+	<field name="SUM(TIMESTAMPDIFF(MONTH, registro_actividad.FEC_INI_REG, registro_actividad.FEC_FIN_REG))" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="65" y="0" width="100" height="25" uuid="ec252fc3-209d-4ec1-abdb-50480561e2be"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SUM(TIMESTAMPDIFF(MONTH, registro_actividad.FEC_INI_REG, registro_actividad.FEC_FIN_REG))}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="65" height="25" uuid="e61b8948-83cd-462b-a0c3-356fb1c03723"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DURACION : ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

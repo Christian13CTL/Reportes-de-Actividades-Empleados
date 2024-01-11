@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="415" pageHeight="240" whenNoDataType="NoPages" columnWidth="415" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aed01ac1-6eea-4f8c-bf67-106806e48455">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ConexionIDK"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="FEC1" class="java.lang.String"/>
+	<parameter name="FEC2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT RegistroActividades.EST_REG, Actividades.NOM_ACT, RegistroActividades.NUM_HOR_REG
+FROM RegistroActividades, Actividades
+WHERE RegistroActividades.ACT_REG = Actividades.IDE_ACT
+AND RegistroActividades.FEC_INI_REG BETWEEN $P{FEC1} AND $P{FEC2}]]>
+	</queryString>
+	<field name="EST_REG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EST_REG"/>
+		<property name="com.jaspersoft.studio.field.label" value="EST_REG"/>
+	</field>
+	<field name="NOM_ACT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOM_ACT"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOM_ACT"/>
+	</field>
+	<field name="NUM_HOR_REG" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="NUM_HOR_REG"/>
+		<property name="com.jaspersoft.studio.field.label" value="NUM_HOR_REG"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="415" height="30" uuid="441b0906-3c11-4f10-8cfe-fefbddf0e192">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" size="16"/>
+				</textElement>
+				<text><![CDATA[HORAS POR ACTIVIDAD POR ESTADO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="210">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<barChart>
+				<chart>
+					<reportElement x="0" y="0" width="415" height="210" uuid="8538f040-707b-4558-b079-7fe8b9ecaf2f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset resetType="Report"/>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{NOM_ACT}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{EST_REG}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{NUM_HOR_REG}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot isShowLabels="true">
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

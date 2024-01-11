@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="415" pageHeight="270" columnWidth="415" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="FEC1" class="java.lang.String"/>
+	<parameter name="FEC2" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Ingeniería en Software (II Semestre)\\IV Semestre\\Metodologías Ágiles\\Proyecto\\IDK_Chancusig_Jaramillo_Zamora\\Desarrollo Escritorio\\ProyectoIDK\\src\\reportesIDK\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT empleado.CED_EMP, tipo_actividad.NOM_TIP
+FROM registro_actividad, tipo_actividad, empleado, actividad
+WHERE registro_actividad.EMP_INI_REG = empleado.CED_EMP
+AND registro_actividad.ACT_REG = actividad.IDE_ACT
+AND registro_actividad.FEC_INI_REG BETWEEN $P{FEC1} AND $P{FEC2};]]>
+	</queryString>
+	<field name="CED_EMP" class="java.lang.String"/>
+	<field name="NOM_TIP" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<subreport>
+				<reportElement x="10" y="0" width="100" height="25"/>
+				<subreportParameter name="FEC1">
+					<subreportParameterExpression><![CDATA[$P{FEC1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FEC2">
+					<subreportParameterExpression><![CDATA[$P{FEC2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportDuracion.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="240" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="0" y="0" width="415" height="240"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{CED_EMP}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{NOM_TIP}]]></categoryExpression>
+						<valueExpression><![CDATA[$V{REPORT_COUNT}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>
